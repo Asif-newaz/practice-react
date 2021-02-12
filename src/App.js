@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+// import Axios from "axios";
 
 function App() {
+  const [joke, setJoke] = useState("");
+
+  // const getJoke = () => {
+  //   Axios.get("https://official-joke-api.appspot.com/random_joke").then(
+  //     (response) => {
+  //       setJoke(`${response.data.setup} ... ${response.data.punchline}`);
+  //       console.log(response);
+  //     }
+  //   );
+  // };
+
+  const getJoke = () => {
+    fetch("https://official-joke-api.appspot.com/random_joke")
+      .then((response) => response.json())
+      .then((data) => {
+        setJoke(`${data.setup} ... ${data.punchline}`);
+        console.log(data);
+      });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello API!</h1>
+      <q style={{ display: "block", marginBottom: "1rem" }}>{joke}</q>
+      <button onClick={getJoke}>Get Joke!</button>
     </div>
   );
 }
