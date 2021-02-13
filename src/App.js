@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import "./App.css";
+import randomcolor from "randomcolor";
 // import Axios from "axios";
 
 function App() {
   // const [joke, setJoke] = useState("");
   const [count, setCount] = useState(0);
+  const [color, setColor] = useState(randomcolor());
 
   const increment = () => {
     return setCount((prevCount) => prevCount + 1);
@@ -17,11 +20,17 @@ function App() {
   const doubled = () => {
     return setCount((prevCount) => prevCount * 2);
   };
-  // const countUpdate = () => {
-  //   return setCount(function (prevCount) {
-  //     return prevCount + 1;
-  //   });
-  // };
+
+  // useEffect(() => {
+  //   effect
+  //   return () => {
+  //     cleanup
+  //   }
+  // }, [input])
+
+  useEffect(() => {
+    setColor(randomcolor())
+  }, [count]);
 
   // const getJoke = () => {
   //   Axios.get("https://official-joke-api.appspot.com/random_joke").then(
@@ -43,9 +52,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello useState!</h1>
+      <h1 style={{ color: color }}>Hello useState!</h1>
       <h1
         style={{
+          color: color,
           margin: "auto",
           width: "300px",
           border: "1px solid goldenrod",
@@ -95,7 +105,7 @@ function App() {
           backgroundColor: "crimson",
           padding: "10px 30px",
           color: "white",
-          marginTop: '15px'
+          marginTop: "15px",
         }}
         // onClick={() => setCount((prevCount) => prevCount + 1)}
         onClick={doubled}
