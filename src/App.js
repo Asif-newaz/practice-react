@@ -9,18 +9,6 @@ function App() {
   const [count, setCount] = useState(0);
   const [color, setColor] = useState(randomcolor());
 
-  const increment = () => {
-    return setCount((prevCount) => prevCount + 1);
-  };
-
-  const decrement = () => {
-    return setCount((prevCount) => prevCount - 1);
-  };
-
-  const doubled = () => {
-    return setCount((prevCount) => prevCount * 2);
-  };
-
   // useEffect(() => {
   //   effect
   //   return () => {
@@ -29,7 +17,13 @@ function App() {
   // }, [input])
 
   useEffect(() => {
-    setColor(randomcolor())
+    setInterval(() => {
+      setCount((prevCount) => prevCount + 1);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    setColor(randomcolor());
   }, [count]);
 
   // const getJoke = () => {
@@ -64,54 +58,6 @@ function App() {
       >
         {count}
       </h1>
-      <button
-        style={{
-          display: "block",
-          margin: "auto",
-          border: "none",
-          borderRadius: "4px",
-          backgroundColor: "crimson",
-          padding: "10px 30px",
-          color: "white",
-          marginTop: "15px",
-          marginBottom: "15px",
-        }}
-        // onClick={() => setCount((prevCount) => prevCount + 1)}
-        onClick={increment}
-      >
-        Change!
-      </button>
-      <button
-        style={{
-          display: "block",
-          margin: "auto",
-          border: "none",
-          borderRadius: "4px",
-          backgroundColor: "crimson",
-          padding: "10px 30px",
-          color: "white",
-        }}
-        // onClick={() => setCount((prevCount) => prevCount + 1)}
-        onClick={decrement}
-      >
-        Decrement!
-      </button>
-      <button
-        style={{
-          display: "block",
-          margin: "auto",
-          border: "none",
-          borderRadius: "4px",
-          backgroundColor: "crimson",
-          padding: "10px 30px",
-          color: "white",
-          marginTop: "15px",
-        }}
-        // onClick={() => setCount((prevCount) => prevCount + 1)}
-        onClick={doubled}
-      >
-        Doubled!
-      </button>
       {/* <h1>Hello API!</h1> */}
       {/* <q style={{ display: "block", marginBottom: "1rem" }}>{joke}</q> */}
       {/* <button onClick={getJoke}>Get Joke!</button> */}
