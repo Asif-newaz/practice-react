@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 // Components
-import Wrapper from "./LearnHooksSimplifiedWeb.style";
+import Wrapper from "./UseStateSimplified.style";
 
-const LearnHooksSimplifiedWeb = () => {
+const UseStateSimplified = () => {
   const [count, setCount] = useState(4);
   const [theme, setTheme] = useState('Hot pink');
 
@@ -46,4 +46,4 @@ const LearnHooksSimplifiedWeb = () => {
   );
 };
 
-export default LearnHooksSimplifiedWeb;
+export default UseStateSimplified;

@@ -4,12 +4,12 @@ import "./App.css";
 // Components
 // import RandomJokeApiCall from "./Components/RandomJokeApiCall/index";
 // import LearnUseEffectScrimba from "./Components/LearnUseEffectScrimba/index";
-// import LearnHooksSimplifiedWeb from "./Components/LearnHooksSimplifiedWeb/useStateSimplified";
+// import UseStateSimplified from "./Components/LearnHooksSimplifiedWeb/UseStateSimplified";
 
 function App() {
   return (
     <div className="App">
-      {/* <LearnHooksSimplifiedWeb /> */}
+      {/* <UseStateSimplified /> */}
       {/* <LearnUseEffectScrimba /> */}
       {/* <RandomJokeApiCall /> */}
     </div>
