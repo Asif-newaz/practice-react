@@ -12,6 +12,10 @@ const Wrapper = styled.div`
       padding: 10px;
       margin: 0 20px;
       font-size: 1.5rem;
+      font-weight: 500;
+      background-color: goldenrod;
+      border-radius: 4px;
+      color: #ffffff;
   }
 `;
 
