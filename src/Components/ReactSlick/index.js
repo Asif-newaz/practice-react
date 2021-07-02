@@ -4,41 +4,50 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./style.css";
+
+// Components
+import SlickCard from "./SlickCard";
 
 const ReactSlick = () => {
   const settings = {
-    dots: true,
+    className: "center",
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    centerPadding: "60px",
+    slidesToShow: 5,
+    swipeToSlide: true,
+    afterChange: function (index) {
+      console.log(
+        `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+      );
+    },
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Hello React-Slick slider!</h1>
       <Slider {...settings}>
         <div>
-          <h3>1</h3>
+          <SlickCard />
         </div>
         <div>
-          <h3>2</h3>
+          <SlickCard />
         </div>
         <div>
-          <h3>3</h3>
+          <SlickCard />
         </div>
         <div>
-          <h3>4</h3>
+          <SlickCard />
         </div>
         <div>
-          <h3>5</h3>
+          <SlickCard />
         </div>
         <div>
-          <h3>6</h3>
+          <SlickCard />
         </div>
       </Slider>
     </div>
   );
-}
+};
 
 export default ReactSlick;
