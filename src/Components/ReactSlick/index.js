@@ -14,8 +14,10 @@ const ReactSlick = () => {
     className: "center",
     infinite: true,
     centerPadding: "60px",
+    // centerMode: true,
     slidesToShow: 5,
     swipeToSlide: true,
+    arrows: true,
     afterChange: function (index) {
       console.log(
         `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
@@ -25,27 +27,30 @@ const ReactSlick = () => {
 
   return (
     <div className="container">
-      <h1>Hello React-Slick slider!</h1>
-      <Slider {...settings}>
-        <div>
-          <SlickCard />
+      <div className="child-son">
+        <div className="child-grand-son">
+          <Slider {...settings}>
+            <div>
+              <SlickCard />
+            </div>
+            <div>
+              <SlickCard />
+            </div>
+            <div>
+              <SlickCard />
+            </div>
+            <div>
+              <SlickCard />
+            </div>
+            <div>
+              <SlickCard />
+            </div>
+            <div>
+              <SlickCard />
+            </div>
+          </Slider>
         </div>
-        <div>
-          <SlickCard />
-        </div>
-        <div>
-          <SlickCard />
-        </div>
-        <div>
-          <SlickCard />
-        </div>
-        <div>
-          <SlickCard />
-        </div>
-        <div>
-          <SlickCard />
-        </div>
-      </Slider>
+      </div>
     </div>
   );
 };

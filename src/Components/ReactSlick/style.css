@@ -1,3 +1,16 @@
 .container {
-  background-color: crimson;
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+}
+
+.child-son {
+  background-color: chocolate;
+  width: 90%;
+  flex-basis: 50%;
+}
+
+.child-grand-son {
+  background-color: coral;
+  width: 50%;
 }
