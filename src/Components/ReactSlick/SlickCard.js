@@ -7,15 +7,10 @@ import dhShop from "../../assets/dh-shop.png";
 const SlickCard = () => {
   return (
     <Box
-    m='0 1rem'
-      bg="goldenrod"
-      // padding="2rem"
-      min-height="20rem"
-      maxW="20rem"
-      borderRadius="4px"
+    // height="20rem"
+    // w="100%"
     >
-      <img src={dhShop} alt="dh shop" />
-      {/* <h1>Hello</h1> */}
+      <img src={dhShop} alt="dh shop" style={{}} />
     </Box>
   );
 };
