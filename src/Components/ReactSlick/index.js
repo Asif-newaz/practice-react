@@ -25,28 +25,30 @@ const ReactSlick = () => {
   // };
 
   return (
-    <div style={{ margin: "30px" }}>
-      <h1>Basic slick slider</h1>
-      <Slider autoplay={true} dots infinite={false}>
-        <div>
-          <SlickCard />
-        </div>
-        <div>
-          <SlickCard />
-        </div>
-        <div>
-          <SlickCard />
-        </div>
-        <div>
-          <SlickCard />
-        </div>
-        <div>
-          <SlickCard />
-        </div>
-        <div>
-          <SlickCard />
-        </div>
-      </Slider>
+    <div style={{ margin: "30px", display: "flex" }}>
+      <div style={{width: '100%'}}>
+        <h1>Basic slick slider</h1>
+        <Slider autoplay={true} dots infinite={false}>
+          <div>
+            <SlickCard />
+          </div>
+          <div>
+            <SlickCard />
+          </div>
+          <div>
+            <SlickCard />
+          </div>
+          <div>
+            <SlickCard />
+          </div>
+          <div>
+            <SlickCard />
+          </div>
+          <div>
+            <SlickCard />
+          </div>
+        </Slider>
+      </div>
     </div>
   );
 };
