@@ -2,15 +2,19 @@ import React from "react";
 
 import { Box } from "@chakra-ui/react";
 
-import dhShop from "../../assets/dh-shop.png";
+// const images = [imageOne, imageTwo, imageThree, imageFour];
+// const friends = ["Anthonie", "Mark", "Stephanie", "Emily"];
 
-const SlickCard = () => {
+const SlickCard = (props) => {
   return (
-    <Box
-    // height="20rem"
-    // w="100%"
-    >
-      <img src={dhShop} alt="dh shop" style={{}} />
+    <Box height="80vh" w="100%">
+      <Box>
+        <img
+          src={props.img}
+          alt="dh shop"
+          style={{ height: "100%", width: "100%" }}
+        />
+      </Box>
     </Box>
   );
 };

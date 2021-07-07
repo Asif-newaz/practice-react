@@ -15,10 +15,7 @@
   width: 50%;
 } */
 
-.slick-arrow.slick-next {
-  background-color: darkgoldenrod;
-}
-
+.slick-arrow.slick-next,
 .slick-arrow.slick-prev {
-  background-color: transparent;
+  background-color: darkgoldenrod;
 }
