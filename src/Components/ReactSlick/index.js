@@ -8,13 +8,7 @@ import "./style.css";
 
 // Components
 import SlickCard from "./SlickCard";
-
-import imageOne from "../../assets/image-1.jpg";
-import imageTwo from "../../assets/image-2.jpg";
-import imageThree from "../../assets/image-3.jpg";
-import imageFour from "../../assets/image-4.jpg";
-
-const images = [imageOne, imageTwo, imageThree, imageFour];
+import { images } from "./Data";
 
 const ReactSlick = () => {
   // const settings = {
