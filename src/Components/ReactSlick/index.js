@@ -11,24 +11,35 @@ import SlickCard from "./SlickCard";
 import { images } from "./Data";
 
 const ReactSlick = () => {
-  // const settings = {
-  //   className: "center",
-  //   infinite: true,
-  //   centerPadding: "60px",
-  //   slidesToShow: 5,
-  //   swipeToSlide: true,
-  //   arrows: true,
-  //   afterChange: function (index) {
-  //     console.log(
-  //       `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-  //     );
-  //   },
-  // };
+  const settings = {
+    autoplay: true,
+    autoplaySpeed: 2000,
+    infinite: true,
+    arrows: true,
+    customPaging: (i) => {
+      return (
+        <div>
+          <img
+            style={{ height: "50px", width: "50px", borderRadius: "4px" }}
+            src={images[i]}
+            alt="dots icon"
+          />
+        </div>
+      );
+    },
+    dots: true,
+    dotsClass: "slick-dots custom-indicator"
+    // afterChange: function (index) {
+    //   console.log(
+    //     `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
+    //   );
+    // },
+  };
 
   return (
     <div style={{ margin: "30px", display: "flex" }}>
       <div style={{ width: "100%" }}>
-        <Slider autoplay={true} dots>
+        <Slider {...settings}>
           {images.map((img) => (
             <div>
               <SlickCard img={img} />
