@@ -6,16 +6,44 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./style.css";
 
+import arrowNext from "../../assets/home-slider-next-arrow.png";
+
 // Components
 import SlickCard from "./SlickCard";
 import { images } from "./Data";
 
+const NextBtn = (props) => {
+  console.log(props);
+  const { className, onClick } = props;
+  return (
+    <div
+      style={{ width: "50px", height: "50px" }}
+      className={className}
+      onClick={onClick}
+    >
+      <img src={arrowNext} alt="arrow next" />
+    </div>
+  );
+};
+
+const PreviousBtn = (props) => {
+  const { className, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <img src={arrowNext} alt="arrow next" />
+    </div>
+  );
+};
+
 const ReactSlick = () => {
   const settings = {
-    autoplay: true,
     autoplaySpeed: 2000,
     infinite: true,
     arrows: true,
+    dots: true,
+    dotsClass: "slick-dots custom-indicator",
+    prevArrow: <PreviousBtn />,
+    nextArrow: <NextBtn />,
     customPaging: (i) => {
       return (
         <div>
@@ -27,17 +55,18 @@ const ReactSlick = () => {
         </div>
       );
     },
-    dots: true,
-    dotsClass: "slick-dots custom-indicator"
-    // afterChange: function (index) {
-    //   console.log(
-    //     `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-    //   );
-    // },
   };
 
   return (
-    <div style={{ margin: "30px", display: "flex" }}>
+    <div
+      style={{
+        width: "80%",
+        margin: "0 auto",
+        display: "flex",
+
+        backgroundColor: "#141414",
+      }}
+    >
       <div style={{ width: "100%" }}>
         <Slider {...settings}>
           {images.map((img) => (

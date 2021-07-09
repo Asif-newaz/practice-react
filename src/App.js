@@ -7,12 +7,10 @@ import "./App.css";
 // import UseStateSimplified from "./Components/LearnHooksSimplifiedWeb/UseStateSimplified";
 // import UseEffectSimplified from "./Components/LearnHooksSimplifiedWeb/UseEffectSimplified.js";
 import ReactSlick from "./Components/ReactSlick/index";
-// import Coupon from "./Components/Coupon/index";
 
 function App() {
   return (
     <div className="App">
-      {/* <Coupon /> */}
       <ReactSlick />
       {/* <UseEffectSimplified /> */}
       {/* <UseStateSimplified /> */}
