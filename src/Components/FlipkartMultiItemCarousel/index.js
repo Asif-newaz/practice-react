@@ -44,17 +44,6 @@ const ReactSlick = () => {
     dotsClass: "slick-dots custom-indicator",
     prevArrow: <PreviousBtn />,
     nextArrow: <NextBtn />,
-    customPaging: (i) => {
-      return (
-        <div>
-          <img
-            style={{ height: "50px", width: "50px", borderRadius: "4px" }}
-            src={images[i]}
-            alt="dots icon"
-          />
-        </div>
-      );
-    },
   };
 
   return (
