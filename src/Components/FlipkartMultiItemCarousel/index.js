@@ -37,10 +37,8 @@ const PreviousBtn = (props) => {
 
 const ReactSlick = () => {
   const settings = {
-    autoplaySpeed: 2000,
     infinite: true,
     arrows: true,
-    dots: true,
     dotsClass: "slick-dots custom-indicator",
     prevArrow: <PreviousBtn />,
     nextArrow: <NextBtn />,
