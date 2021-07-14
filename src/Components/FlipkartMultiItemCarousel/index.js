@@ -61,24 +61,6 @@ const ReactSlick = () => {
               <SlickCard img={img} />
             </div>
           ))}
-          {/* <div>
-            <SlickCard />
-          </div>
-          <div>
-            <SlickCard />
-          </div>
-          <div>
-            <SlickCard />
-          </div>
-          <div>
-            <SlickCard />
-          </div>
-          <div>
-            <SlickCard />
-          </div>
-          <div>
-            <SlickCard />
-          </div> */}
         </Slider>
       </div>
     </div>
