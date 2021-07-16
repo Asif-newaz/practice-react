@@ -6,12 +6,14 @@ import "./App.css";
 // import LearnUseEffectScrimba from "./Components/LearnUseEffectScrimba/index";
 // import UseStateSimplified from "./Components/LearnHooksSimplifiedWeb/UseStateSimplified";
 // import UseEffectSimplified from "./Components/LearnHooksSimplifiedWeb/UseEffectSimplified.js";
-import ReactSlick from "./Components/ReactSlick/index";
+// import ReactSlick from "./Components/ReactSlick/index";
+import FlipKartMultiItemCarousel from "./Components/FlipkartMultiItemCarousel";
 
 function App() {
   return (
     <div className="App">
-      <ReactSlick />
+      <FlipKartMultiItemCarousel />
+      {/* <ReactSlick /> */}
       {/* <UseEffectSimplified /> */}
       {/* <UseStateSimplified /> */}
       {/* <LearnUseEffectScrimba /> */}
