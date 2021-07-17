@@ -39,8 +39,8 @@ const ReactSlick = () => {
   const settings = {
     infinite: true,
     arrows: true,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     dotsClass: "slick-dots custom-indicator",
     prevArrow: <PreviousBtn />,
     nextArrow: <NextBtn />,
