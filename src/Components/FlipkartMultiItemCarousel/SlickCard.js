@@ -2,9 +2,6 @@ import React from "react";
 
 import { Box } from "@chakra-ui/react";
 
-// const images = [imageOne, imageTwo, imageThree, imageFour];
-// const friends = ["Anthonie", "Mark", "Stephanie", "Emily"];
-
 const SlickCard = (props) => {
   return (
     <Box height="80vh" w="100%">
