@@ -50,8 +50,10 @@ const ReactSlick = () => {
     <div
       style={{
         width: "80%",
+        height: "100vh",
         margin: "0 auto",
         display: "flex",
+        alignItems: "center",
 
         backgroundColor: "#141414",
       }}
